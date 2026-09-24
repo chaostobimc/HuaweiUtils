@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.AIBridge" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/purple_500</item>
+    </style>
+</resources>

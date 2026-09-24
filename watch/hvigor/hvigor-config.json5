@@ -1,0 +1,10 @@
+{
+  "modelVersion": "5.0",
+  "dependencies": {
+    "@hmscore/hvigor-ohos": "5.0.0"
+  },
+  "execution": {},
+  "nodeOptions": {},
+  "properties": {},
+  "hvigorVersion": "5.0.0"
+}

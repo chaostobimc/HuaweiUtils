@@ -1,0 +1,15 @@
+{
+  "name": "ai-watch",
+  "version": "1.0.0",
+  "description": "Private AI Assistent für Huawei Watch GT6",
+  "main": "",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/hvigor-ohos": "5.0.0",
+    "@types/hvigor": "5.0.0"
+  },
+  "dynamicDependencies": {},
+  "scripts": {}
+}

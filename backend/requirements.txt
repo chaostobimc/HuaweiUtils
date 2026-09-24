@@ -1,0 +1,15 @@
+# FastAPI Core - lightweight, Pi5 optimized
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+pydantic==2.6.3
+python-dotenv==1.0.1
+httpx==0.27.0
+orjson==3.10.0
+
+# dsk dependencies (pinned)
+curl-cffi==0.8.1b9
+wasmtime==28.0.0
+numpy==1.26.4
+
+# dsk installed via git in Dockerfile
+# git+https://github.com/xtekky/deepseek4free.git

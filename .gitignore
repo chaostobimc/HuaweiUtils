@@ -1,0 +1,39 @@
+# Env & Secrets
+.env
+backend/.env
+backend/data/
+backend/cookies.json
+*.keystore
+*.jks
+agconnect-services.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Android
+android/.gradle/
+android/app/build/
+android/build/
+*.apk
+*.aab
+local.properties
+
+# DevEco / HarmonyOS
+watch/.idea/
+watch/build/
+watch/.hvigor/
+watch/entry/build/
+watch/.preview/
+*.hap
+*.hsp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

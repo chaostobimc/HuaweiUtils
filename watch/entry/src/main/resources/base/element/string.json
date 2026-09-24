@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "AI Assistent"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "AI Assistent"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "Private AI Assistent"
+    },
+    {
+      "name": "placeholder_input",
+      "value": "Frage tippen..."
+    },
+    {
+      "name": "btn_send",
+      "value": "Senden"
+    }
+  ]
+}

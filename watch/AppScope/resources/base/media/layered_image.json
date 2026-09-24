@@ -1,0 +1,12 @@
+{
+  "layered": {
+    "background": {
+      "type": "color",
+      "color": "#FFFFFF"
+    },
+    "foreground": {
+      "type": "image",
+      "image": "app_icon"
+    }
+  }
+}

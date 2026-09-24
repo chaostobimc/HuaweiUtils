@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AI Bridge</string>
+    <string name="status_initial">Status: Initialisiere...</string>
+    <string name="hint_pi_url">Pi Backend URL (z.B. http://192.168.1.50:8000)</string>
+    <string name="btn_search_watch">Suche Uhr (WearEngine)</string>
+    <string name="btn_save">Pi URL speichern &amp; Service neustarten</string>
+    <string name="logs_info">Logs: adb logcat -s AIBridge-*</string>
+</resources>

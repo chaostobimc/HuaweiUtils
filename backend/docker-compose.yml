@@ -1,0 +1,59 @@
+services:
+  ai-bridge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      platforms:
+        - linux/arm64  # Pi5
+        - linux/amd64  # fallback for testing on PC
+    container_name: huawei-ai-bridge
+    restart: unless-stopped  # Pi reboot safe
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env  # DEEPSEEK_USER_TOKEN kommt hierher
+    environment:
+      # Defaults - überschreibbar via .env
+      - MAX_PROMPT_LEN=500
+      - MAX_RESPONSE_LEN=800
+      - ENABLE_THINKING=true
+      - ENABLE_SEARCH=false
+      - RATE_LIMIT_SECONDS=1.5
+      - CACHE_TTL=0
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # Optional: persist cookies.json from dsk to avoid Cloudflare challenges
+      - ./data:/app/data
+      # Optional: mount custom cookies.json
+      # - ./cookies.json:/app/dsk/cookies.json:ro
+    networks:
+      - ai-net
+    # Resource limits for Pi5 (8GB RAM, but keep lean)
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 1G
+        reservations:
+          memory: 256M
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Optional: Add nginx reverse proxy later for TLS
+  # nginx:
+  #   image: nginx:alpine
+  #   ports:
+  #     - "443:443"
+
+networks:
+  ai-net:
+    driver: bridge
+    name: huawei-ai-net
+
+# Usage:
+# 1. cp .env.example .env -> edit token
+# 2. docker compose up -d --build
+# 3. curl http://pi-ip:8000/health

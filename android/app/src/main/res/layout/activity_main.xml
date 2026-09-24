@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Huawei AI Bridge"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Watch GT6 → Handy → Pi5"
+            android:textSize="12sp"
+            android:textColor="#666"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/status_initial"
+            android:textSize="14sp"
+            android:padding="12dp"
+            android:background="#F0F0F0"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_pi_url"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPiUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textUri"
+                android:text="http://192.168.1.50:8000"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnGetDevices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_search_watch"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_save"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnTestPi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teste Pi Verbindung"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logs &amp; Debugging:"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logs_info"
+            android:textSize="12sp"
+            android:textColor="#888"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wichtig:\n• Huawei Health muss laufen &amp; Uhr gekoppelt sein\n• Akku-Optimierung für diese App auf 'Uneingeschränkt'\n• Fingerprints in Code prüfen (siehe DEPLOYMENT.md)\n• Pi und Handy im gleichen WLAN"
+            android:textSize="11sp"
+            android:textColor="#666"
+            android:layout_marginTop="12dp"
+            android:lineSpacingExtra="2dp"/>
+
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:background="#111"
+            android:textColor="#0F0"
+            android:padding="8dp"
+            android:layout_marginTop="16dp"
+            android:minHeight="100dp"/>
+
+    </LinearLayout>
+</ScrollView>
