@@ -1,7 +1,8 @@
 # Env & Secrets
 .env
 backend/.env
-backend/data/
+backend/data/*
+!backend/data/.gitkeep
 backend/cookies.json
 *.keystore
 *.jks
